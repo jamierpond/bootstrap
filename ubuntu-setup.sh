@@ -10,31 +10,8 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 && sudo apt update \
 && sudo apt install gh -y
 
-# do the login thing, paste your token
-
-# ask user for token
-echo "Please enter your github token"
-unset token
-echo -n "Enter token: "
-while IFS= read -p "$prompt" -r -s -n 1 char
-do
-    # Enter - accept token
-    if [[ $char == $'\0' ]] ; then
-        break
-    fi
-    # Backspace
-    if [[ $char == $'\177' ]] ; then
-        prompt=$'\b \b'
-        token="${token%?}"
-    else
-        prompt='*'
-        token+="$char"
-    fi
-done
-echo "" # formatting
-
 # login to gh
-gh auth login --with-token "$token"
+gh auth login
 gh auth setup-git
 
 git config --global user.email "jamiepond259@gmail.com"
