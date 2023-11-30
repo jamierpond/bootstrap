@@ -17,8 +17,6 @@ gh auth setup-git
 git config --global user.email "jamiepond259@gmail.com"
 git config --global user.name "Jamie Pond" 
 
-exit
-
 # install docker
 # # Add Docker's official GPG key:
 sudo apt-get update
