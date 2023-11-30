@@ -13,8 +13,6 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 gh auth login
 gh auth setup-git
 
-exit
-
 # install docker
 # # Add Docker's official GPG key:
 sudo apt-get update
