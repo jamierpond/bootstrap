@@ -1,3 +1,4 @@
+#!/bin/bash
 # install boring things we probably need
 sudo apt update && sudo apt install -y build-essential
 
@@ -35,6 +36,9 @@ echo "" # formatting
 # login to gh
 gh auth login --with-token "$token"
 gh auth setup-git
+
+git config --global user.email "jamiepond259@gmail.com"
+git config --global user.name "Jamie Pond" 
 
 exit
 
