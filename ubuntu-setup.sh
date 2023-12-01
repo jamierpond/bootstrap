@@ -2,19 +2,11 @@
 set -e
 
 # install boring things we probably need
-sudo apt update && sudo apt install -y build-essential nodejs npm unzip zip fzf libevent-dev ncurses-dev
+sudo apt update && sudo apt install -y build-essential nodejs npm unzip zip fzf tmux
 
-wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz
-tar -xzf tmux-3.3a.tar.gz
-cd tmux-3.3a
-./configure && make
-sudo make install
-cd ..
-rm -rf tmux-3.3a
-rm tmux-3.3a.tar.gz
+# tmux alias
+echo "alias tmux=tmux -f ~/.config/tmux/tmux.conf" >> ~/.bashrc
 
-# add to the path
-echo "export PATH=$PATH:/usr/local/bin" >> ~/.bashrc
 exit 0
 
 
