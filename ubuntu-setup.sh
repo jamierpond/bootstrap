@@ -13,7 +13,10 @@ cd ..
 rm -rf tmux-3.3a
 rm tmux-3.3a.tar.gz
 
+# add to the path
+echo "export PATH=$PATH:/usr/local/bin" >> ~/.bashrc
 exit 0
+
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
