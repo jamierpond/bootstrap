@@ -3,8 +3,14 @@
 # install boring things we probably need
 sudo apt update && sudo apt install -y build-essential nodejs npm unzip zip fzf
 
-wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz tmux.tar.gz
-
+wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz
+tar -xzf tmux-3.3a.tar.gz
+cd tmux-3.3a
+./configure && make
+sudo make install
+cd ..
+rm -rf tmux-3.3a
+rm tmux-3.3a.tar.gz
 
 
 
