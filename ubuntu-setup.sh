@@ -3,6 +3,11 @@
 # install boring things we probably need
 sudo apt update && sudo apt install -y build-essential nodejs npm unzip zip fzf
 
+wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz tmux.tar.gz
+
+
+
+
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
