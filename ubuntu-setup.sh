@@ -5,7 +5,7 @@ set -e
 sudo apt update && sudo apt install -y build-essential nodejs npm unzip zip fzf tmux
 
 # tmux alias
-echo "alias tmux=tmux -f ~/.config/tmux/tmux.conf" >> ~/.bashrc
+echo "alias tmux='tmux -f ~/.config/tmux/tmux.conf'" >> ~/.bashrc
 
 exit 0
 
