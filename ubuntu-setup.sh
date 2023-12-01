@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install boring things we probably need
-sudo apt update && sudo apt install -y build-essential nodejs npm unzip zip
+sudo apt update && sudo apt install -y build-essential nodejs npm unzip zip fzf
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
