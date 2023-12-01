@@ -15,7 +15,7 @@ gh auth login
 gh auth setup-git
 
 git config --global user.email "jamiepond259@gmail.com"
-git config --global user.name "Jamie Pond" 
+git config --global user.name "Jamie Pond"
 
 # install docker
 # # Add Docker's official GPG key:
@@ -40,10 +40,12 @@ echo "You now need to authorize the github cli with your account"
 git clone https://github.com/jamierpond/.config ~/jamie-config
 cp -r ~/jamie-config/* ~/.config
 
-# install packer for nvim
-rm -rf ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+# install typscript and node
+curl -fsSL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+sudo apt-get install -y nodejs
+npm install -g typescript
+
+sudo snap install go --classic
 
 wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 tar xzf nvim-linux64.tar.gz
