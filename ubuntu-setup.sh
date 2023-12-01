@@ -4,11 +4,8 @@ set -e
 # install boring things we probably need
 sudo apt update && sudo apt install -y build-essential nodejs npm unzip zip fzf tmux
 
-# tmux alias
+# tmux alias, so we can use our config
 echo "alias tmux='tmux -f ~/.config/tmux/tmux.conf'" >> ~/.bashrc
-
-exit 0
-
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
