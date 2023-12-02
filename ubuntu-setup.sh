@@ -2,7 +2,9 @@
 set -e
 
 # install boring things we probably need
-sudo apt update && sudo apt install -y build-essential nodejs npm unzip zip fzf tmux
+sudo apt update && sudo apt install -y build-essential nodejs npm unzip zip \
+  fzf tmux pkg-config protobuf-compiler cmake
+sudo apt upgrade
 
 # tmux alias, so we can use our config
 echo "alias tmux='tmux -f ~/.config/tmux/tmux.conf'" >> ~/.bashrc
@@ -12,7 +14,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # go
 sudo snap install go --classic
-
 
 # setup git
 git config --global user.email "jamiepond259@gmail.com"
