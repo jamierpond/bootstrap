@@ -53,17 +53,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # go
 sudo snap install go --classic
 
-# setup git
-git config --global user.email "jamiepond259@gmail.com"
-git config --global user.name "Jamie Pond"
-
-rm -rf ~/jamie-config
-git clone https://github.com/jamierpond/.config ~/jamie-config
-cp -r ~/jamie-config/* ~/.config
-
-# install nvims
-sudo snap install nvim --classic
-
 # todo just make this using a token
 # install gh cli
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
@@ -76,4 +65,15 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 # login to gh
 gh auth login
 gh auth setup-git
+
+# setup git
+git config --global user.email "jamiepond259@gmail.com"
+git config --global user.name "Jamie Pond"
+
+rm -rf ~/jamie-config
+git clone https://github.com/jamierpond/.config ~/jamie-config
+cp -r ~/jamie-config/* ~/.config
+
+# install nvims
+sudo snap install nvim --classic
 
