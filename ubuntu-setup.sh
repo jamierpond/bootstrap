@@ -4,7 +4,7 @@ set -e
 # install boring things we probably need
 sudo apt update && sudo apt install -y build-essential nodejs npm unzip zip \
   fzf tmux pkg-config protobuf-compiler cmake linux-libc-dev clang git-secret \
-  libksba-dev libassuan-dev libgpg-error-dev libgcrypt-dev libnpth-dev
+  libomp-dev
 sudo apt upgrade
 
 # tmux alias, so we can use our config
