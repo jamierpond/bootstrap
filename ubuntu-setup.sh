@@ -1,39 +1,6 @@
 #!/bin/bash
 set -e
 
-# *** You need libgpg-error to build this program.
-# **  This library is for example available at
-# ***   https://gnupg.org/ftp/gcrypt/gpgrt
-# *** (at least version 1.46 is required.)
-# ***
-# configure:
-# ***
-# *** You need libgcrypt to build this program.
-# **  This library is for example available at
-# ***   https://gnupg.org/ftp/gcrypt/libgcrypt/
-# *** (at least version 1.9.1 (API 1) is required.)
-# ***
-# configure:
-# ***
-# *** You need libassuan to build this program.
-# *** This library is for example available at
-# ***   https://gnupg.org/ftp/gcrypt/libassuan/
-# *** (at least version 2.5.0 (API 2) is required).
-# ***
-# configure:
-# ***
-# *** You need libksba to build this program.
-# *** This library is for example available at
-# ***   https://gnupg.org/ftp/gcrypt/libksba/
-# *** (at least version 1.6.3 using API 1 is required).
-# ***
-# configure:
-# ***
-# *** It is now required to build with support for the
-# *** New Portable Threads Library (nPth). Please install this
-# *** library first.  The library is for example available at
-# ***   https://gnupg.org/ftp/gcrypt/npth/
-
 # install boring things we probably need
 sudo apt update && sudo apt install -y build-essential nodejs npm unzip zip \
   fzf tmux pkg-config protobuf-compiler cmake linux-libc-dev clang git-secret \
