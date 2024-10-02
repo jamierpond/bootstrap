@@ -3,7 +3,7 @@ set -e
 
 # install boring things we probably need
 sudo apt update && sudo apt install -y build-essential nodejs npm unzip zip \
-  fzf snapd pkg-config protobuf-compiler cmake linux-libc-dev clang git-secret \
+  fzf ripgrep snapd ffmpeg sox libsox-dev pkg-config protobuf-compiler cmake linux-libc-dev clang git-secret \
   libomp-dev
 sudo apt upgrade
 
