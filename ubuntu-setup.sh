@@ -3,9 +3,14 @@ set -e
 
 # install boring things we probably need
 sudo apt update && sudo apt install -y build-essential nodejs npm unzip zip \
-  fzf tmux pkg-config protobuf-compiler cmake linux-libc-dev clang git-secret \
+  fzf snapd pkg-config protobuf-compiler cmake linux-libc-dev clang git-secret \
   libomp-dev
 sudo apt upgrade
+
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
 
 # tmux alias, so we can use our config
 echo "alias tmux='tmux -f ~/.config/tmux/tmux.conf'" >> ~/.bashrc
@@ -14,11 +19,11 @@ echo "alias tmux='tmux -f ~/.config/tmux/tmux.conf'" >> ~/.bashrc
 # 1. add gpg key
 sudo snap install docker
 
-# install rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-# go
-sudo snap install go --classic
+# # install rust
+# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+#
+# # go
+# sudo snap install go --classic
 
 # todo just make this using a token
 # install gh cli
