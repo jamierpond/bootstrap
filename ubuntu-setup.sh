@@ -47,5 +47,6 @@ git clone https://github.com/jamierpond/.config ~/jamie-config
 cp -r ~/jamie-config/* ~/.config
 
 # install nvims
+sudo snap install tmux --classic
 sudo snap install nvim --classic
 
